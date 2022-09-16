@@ -1,0 +1,265 @@
+---
+title: "Les modèles de valorisation des données"
+subtitle: ""
+author: "Samuel Goëta, Datactivist"
+date: "`r Sys.Date()`"
+output:
+  SlidesDatactivist::moon_reader:
+    css: [default, datactivist, datactivist-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: ["macros.js", "matomo.js", "https://platform.twitter.com/widgets.js"]
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    anchor_sections: false
+params:
+  event: valorisation des données
+  slug: velo_territoires  
+  description: Formation sur les modèles de valorisation des données
+  title: Les modèles de valorisation des données
+  image: https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png
+  image_alt: le logo de Datactivist
+---
+
+```{r, echo=FALSE}
+library(metathis)
+meta() %>% 
+  meta_description(params$event) %>% 
+  meta_name("github-repo" = paste0("datactivist/", params$slug)) %>% 
+  meta_viewport() %>% 
+  meta_social(
+    title = params$title,
+    url = paste0("https://datactivist.coop/", params$slug),
+    image = params$image,
+    image_alt = params$image_alt,
+    og_type = "website",
+    og_author = "Datactivist",
+    og_locale = "fr_FR",
+    og_site_name = "Datactivist",
+    twitter_card_type = "summary",
+    twitter_creator = "@datactivi_st")
+
+```
+
+layout: true
+
+<style>
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #e95459;
+}
+
+</style>
+
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><a href='https://datactivist.coop/'><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'></a></div></center></span></div>")` 
+
+
+---
+
+class: center, middle
+
+Ces slides en ligne : `r paste0("http://datactivist.coop/", params$slug)`
+
+Sources : `r paste0("https://github.com/datactivist/", params$slug)`
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+<BR>
+<BR>
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+
+---
+### Valorisation : de quoi on parle ?
+
+Regarder et interroger la définition
+
+Les interroger
+
+Montrer les différentes dimensions
+
+---
+### ### Stratégiques, les données ?
+
+.pull-left[
+.reduite[![](./img/kitchin.jpg)]
+]
+
+.pull-right[
+- Nous vivons une véritable .red[**révolution de la donnée**], quantitative et qualitative
+
+- de .red[**nouveaux acteurs**] transforment en profondeur la gestion des territoires (pensez à Uber, Waze, Airbnb...) en s'appuyant sur la donnée
+
+- les .red[**besoins en données**], mais aussi les capacités d'en obtenir, sont toujours plus importants (drones, satellites, LIDAR, capteurs IoT...) 
+]
+
+
+
+---
+
+### Quelle valeur pour les données ?
+
+
+
+.pull-left[
+- La donnée comme .red[**commodité**] : revendue par celui qui la collecte ou l’agrège.
+
+- La donnée comme .red[**levier**] : utilisée sans marchandisation, par exemple pour réduire les coûts, développer les revenus, transformer l'organisation...
+
+- La donnée comme .red[**actif stratégique**] : une arme pour défendre ou transformer son positionnement, sa place dans son environnement.
+]
+
+.pull-right[
+.reduite[![](https://i0.wp.com/www.fypeditions.com/wp-content/uploads/2014/10/couv-datanomics.gif?resize=404%2C601)]
+]
+
+Détailler les 3 modèles, revenir sur le livre ?
+
+---
+### Data Spectrum
+
+---
+class:inverse, middle, center
+### Données fermées
+
+---
+### CCASD
+
+---
+### Banque de France
+
+---
+### Données synthétiques
+
+
+---
+### Données partagées
+
+Définition ? 
+Niveaux d'accès 
+---
+### Les plateformes d'échange de données
+Dawex  : https://www.lemagit.fr/conseil/Quest-ce-que-Dawex-Et-quel-est-linteret-du-Data-Exchange
+
+Prise en main : retrouver les accès ?
+https://platform.dawex.com/members/search
+
+---
+### Waze 
+
+---
+### HDH
+Présenter le modèle de protection des données, 
+
+---
+### API 
+
+Définition
+
+---
+### API privées
+Exemples : Facebook Connect, France Connect
+---
+### Zoom sur API gouv
+Présenter les API fermées et ouvertes
+
+--- 
+### Open Corporates
+
+---
+### Navitia
+
+---
+class:inverse, middle, center
+
+### Données ouvertes
+
+---
+### La question des redevances
+
+Rufus Pollock
+
+---
+### Le rapport Trojette
+
+---
+### L'encadrement des redevances
+
+Regarder dans le rapport Bothorel
+--- 
+### Les redevances encore en place
+
+Météo France
+---
+### Zoom sur IGN
+
+
+---
+### L'animation de la communauté 
+
+
+---
+### Ecolab
+
+---
+### TOD
+
+---
+### Navitia
+
+
+---
+### Exercice : carto des acteurs data et vélo 
+
+
+---
+### Innovation ouverte
+
+
+---
+### Tableaux de bord 
+Mobiliscope 
+CovidTracker
+France Stratégie segregation
+Issy
+
+---
+### Exercice : indicateurs et données sur le vélo
+
+---
+### Connaissance des usagers
+
+---
+### Hackathons et data sprints
+
+--- 
+### Valoriser les réutilisations
+
+---
+class: inverse, center, middle
+
+# Merci !
+
+Contact : [samuel@datactivist.coop](mailto:samuel@datactivist.coop)
